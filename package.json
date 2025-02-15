@@ -1,0 +1,17 @@
+{
+  "name": "athena-bot",
+  "version": "2.4.0",
+  "description": "Um bot de WhatsApp multifunções.",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "development": "node --watch ./index.js"
+  },
+  "devDependencies": {
+    "@hapi/boom": "^10.0.1",
+    "baileys": "github:WhiskeySockets/Baileys",
+    "express": "^4.21.2",
+    "pino": "^9.6.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
