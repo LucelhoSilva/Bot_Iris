@@ -1,4 +1,4 @@
-const { default: makeWASocket, DisconnectReason, useMultiFileAuthState } = require('@whiskeysockets/baileys');
+const { default: makeWASocket, DisconnectReason, useMultiFileAuthState } = require('baileys');
 const P = require('pino');
 const { Boom } = require('@hapi/boom');
 const MessageHandler = require('./middlewares/messageHandler');
