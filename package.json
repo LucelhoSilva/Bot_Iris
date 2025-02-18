@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "node ./index.js",
-    "development": "node --watch ./index.js"
+    "dev": "node --watch ./index.js"
   },
   "devDependencies": {
     "@hapi/boom": "^10.0.1",
