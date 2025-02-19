@@ -5,7 +5,7 @@ class MenuRedeDeAtendimento {
             return this.resetAndReturnToMain(state);
         }
 
-    // Lida com a seleção de uma cidade pelo usuário no menu "rede". Atualiza o estado com a cidade selecionada e retorna as informações da rede para a cidade selecionada.
+        // Lida com a seleção de uma cidade pelo usuário no menu "rede". Atualiza o estado com a cidade selecionada e retorna as informações da rede para a cidade selecionada.
         if (state.currentMenu === "rede") {
             switch (userInput) {
                 case '1':

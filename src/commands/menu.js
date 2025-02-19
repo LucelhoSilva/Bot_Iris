@@ -6,8 +6,8 @@ const MENU_MODULES = {
     4: { path: './menuConsultarCNPJ', name: 'cnpj' },                   //FEITO
     5: { path: './menuPlanoOdontologico', name: 'odontologico' },       //FEITO
     6: { path: './menuTabelas', name: 'tabelas' },
-    7: { path: './menuRedeDeAtendimento', name: 'rede' },               //FAZENDO
-    8: { path: './menuLinksParaCliente', name: 'links' },
+    7: { path: './menuRedeDeAtendimento', name: 'rede' },               //FEITO
+    8: { path: './menuLinksParaCliente', name: 'links' },               //FAZENDO
     9: { path: './menuTreinamento', name: 'treinamento' },
     10: { path: './menuSuporte', name: 'suporte' },
     11: { path: './menuCadastroParceiro', name: 'parceiro' },
@@ -17,6 +17,14 @@ const MENU_MODULES = {
 
 class Menu {
     static async execute(userInput, state) {
+        //Bloqueia o bot para não responder para grupos
+        if (userInput.from && userInput.from.endsWith('@g.us')) {
+            return;
+        }
+        if (state.from && state.from.endsWith('@g.us')) {
+            return;
+        }
+        
         // Se for a primeira interação ou estado resetado, mostra mensagem de boas-vindas
         if (!state.hasShownWelcome) {
             state.hasShownWelcome = true;

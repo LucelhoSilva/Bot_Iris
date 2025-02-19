@@ -10,7 +10,7 @@ class WhatsAppConnection {
         const sock = makeWASocket({
             printQRInTerminal: true,
             auth: state,
-            logger: P({ level: 'silent' })
+            logger: P({ level: 'debug' }),
         });
 
         this.setupConnectionHandlers(sock, saveCreds);
