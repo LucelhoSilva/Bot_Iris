@@ -4,9 +4,9 @@ const MENU_MODULES = {
     2: { path: './menuConsultarBeneficiario', name: 'beneficiario' },   //FEITO
     3: { path: './menuConsultarOrcamento', name: 'orcamento' },         //FEITO
     4: { path: './menuConsultarCNPJ', name: 'cnpj' },                   //FEITO
-    5: { path: './menuPlanoOdontologico', name: 'odontologico' },       //FAZENDO
+    5: { path: './menuPlanoOdontologico', name: 'odontologico' },       //FEITO
     6: { path: './menuTabelas', name: 'tabelas' },
-    7: { path: './menuRedeDeAtendimento', name: 'rede' },
+    7: { path: './menuRedeDeAtendimento', name: 'rede' },               //FAZENDO
     8: { path: './menuLinksParaCliente', name: 'links' },
     9: { path: './menuTreinamento', name: 'treinamento' },
     10: { path: './menuSuporte', name: 'suporte' },
