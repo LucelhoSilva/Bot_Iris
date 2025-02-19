@@ -1,6 +1,6 @@
 {
-  "name": "athena-bot",
-  "version": "2.4.0",
+  "name": "iris-bot",
+  "version": "0.5.0",
   "description": "Um bot de WhatsApp multifunções.",
   "main": "./src/index.js",
   "scripts": {

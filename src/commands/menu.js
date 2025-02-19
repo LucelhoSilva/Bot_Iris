@@ -1,10 +1,10 @@
 // menu.js
 const MENU_MODULES = {
-    1: { path: './menuToken', name: 'token' },
-    2: { path: './menuConsultarBeneficiario', name: 'beneficiario' },
-    3: { path: './menuConsultarOrcamento', name: 'orcamento' },
-    4: { path: './menuConsultarCNPJ', name: 'cnpj' },
-    5: { path: './menuPlanoOdontologico', name: 'plano' },
+    1: { path: './menuToken', name: 'token' },                          //FEITO
+    2: { path: './menuConsultarBeneficiario', name: 'beneficiario' },   //FEITO
+    3: { path: './menuConsultarOrcamento', name: 'orcamento' },         //FEITO
+    4: { path: './menuConsultarCNPJ', name: 'cnpj' },                   //FEITO
+    5: { path: './menuPlanoOdontologico', name: 'odontologico' },       //FAZENDO
     6: { path: './menuTabelas', name: 'tabelas' },
     7: { path: './menuRedeDeAtendimento', name: 'rede' },
     8: { path: './menuLinksParaCliente', name: 'links' },
@@ -20,13 +20,13 @@ class Menu {
         // Se for a primeira interação ou estado resetado, mostra mensagem de boas-vindas
         if (!state.hasShownWelcome) {
             state.hasShownWelcome = true;
-            return "Oi, sou a Athena, assistente virtual da Corretora PlansCoop 🤖💜\n\n" + this.getMainMenu();
+            return "Oi, sou a Íris, assistente virtual da Corretora PlansCoop 🤖💜\n\n" + this.getMainMenu();
         }
 
         // Se estiver em algum submenu e digitar Q
         if (state.currentMenu !== 'main' && userInput.toLowerCase() === 'q') {
             this.resetState(state);
-            return "Oi, sou a Athena, assistente virtual da Corretora PlansCoop 🤖💜\n\n" + this.getMainMenu();
+            return "Oi, sou a Íris, assistente virtual da Corretora PlansCoop 🤖💜\n\n" + this.getMainMenu();
         }
 
         // Se estiver em algum submenu
@@ -43,7 +43,7 @@ class Menu {
                     // Se o módulo retornar null, significa que devemos mostrar a mensagem de boas-vindas
                     if (response === null) {
                         this.resetState(state);
-                        return "Oi, sou a Athena, assistente virtual da Corretora PlansCoop 🤖💜\n\n" + this.getMainMenu();
+                        return "Oi, sou a Íris, assistente virtual da Corretora PlansCoop 🤖💜\n\n" + this.getMainMenu();
                     }
                     return response;
                 }
