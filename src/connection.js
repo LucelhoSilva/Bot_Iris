@@ -1,4 +1,4 @@
-const { default: makeWASocket, DisconnectReason, useMultiFileAuthState } = require('baileys');
+const { default: makeWASocket, DisconnectReason, useMultiFileAuthState } = require('baileys'); // Correção do caminho da biblioteca
 const P = require('pino');
 const { Boom } = require('@hapi/boom');
 const MessageHandler = require('./middlewares/messageHandler');
@@ -10,7 +10,7 @@ class WhatsAppConnection {
         const sock = makeWASocket({
             printQRInTerminal: true,
             auth: state,
-            logger: P({ level: 'debug' }),
+            logger: P({ level: 'silent' }),
         });
 
         this.setupConnectionHandlers(sock, saveCreds);
