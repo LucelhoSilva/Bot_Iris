@@ -10,9 +10,9 @@ const MENU_MODULES = {
     8: { path: './menuLinksParaCliente', name: 'links' },               //FEITO
     9: { path: './menuTreinamento', name: 'treinamento' },              //FEITO
     10: { path: './menuSuporte', name: 'suporte' },                     //FEITO
-    11: { path: './menuCadastroParceiro', name: 'parceiro' },
-    12: { path: './menuCalcularCotacao', name: 'cotacao' },
-    13: { path: './menuFaleComigo', name: 'faleComigo' }
+    11: { path: './menuCadastroParceiro', name: 'parceiro' },           //FEITO
+    12: { path: './menuCalcularCotacao', name: 'cotacao' },             //FEITO
+    13: { path: './menuFaleComigo', name: 'faleComigo' }                //FEITO
 };
 
 class Menu {
