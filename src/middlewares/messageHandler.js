@@ -66,7 +66,7 @@ class MessageHandler {
             }
 
             try {
-                const response = await commands.menu.execute(userMessage, this.userStates.get(from));
+                const response = await commands.menu.execute(userMessage, this.userStates.get(from), from);
                 await this.sock.sendMessage(from, { text: response });
             } catch (error) {
                 console.error('Erro ao processar comando:', error);
