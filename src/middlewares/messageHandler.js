@@ -13,7 +13,6 @@ class MessageHandler {
         this.blockedNumbers = new Set([
             '558182687275@s.whatsapp.net',
             '553186977393@s.whatsapp.net',
-            '554499090895@s.whatsapp.net',
             '553171632221@s.whatsapp.net',
             '5531997428235@s.whatsapp.net',
             '5531997087192@s.whatsapp.net',
@@ -66,7 +65,7 @@ class MessageHandler {
             }
 
             try {
-                const response = await commands.menu.execute(userMessage, this.userStates.get(from), from);
+                const response = await commands.menu.execute(userMessage, this.userStates.get(from), this.sock, from);
                 await this.sock.sendMessage(from, { text: response });
             } catch (error) {
                 console.error('Erro ao processar comando:', error);
