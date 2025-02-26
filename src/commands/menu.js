@@ -5,13 +5,13 @@ const MENU_MODULES = {
     3: { path: './menuConsultarOrcamento', name: 'orcamento' },         //FEITO
     4: { path: './menuConsultarCNPJ', name: 'cnpj' },                   //FEITO
     5: { path: './menuPlanoOdontologico', name: 'odontologico' },       //FEITO
-    6: { path: './menuTabelas', name: 'tabelas' },
+    6: { path: './menuTabelas', name: 'tabelas' },                      //FEITO
     7: { path: './menuRedeDeAtendimento', name: 'rede' },               //FEITO
     8: { path: './menuLinksParaCliente', name: 'links' },               //FEITO
     9: { path: './menuTreinamento', name: 'treinamento' },              //FEITO
     10: { path: './menuSuporte', name: 'suporte' },                     //FEITO
-    11: { path: './menuCadastroParceiro', name: 'parceiro' },
-    12: { path: './menuCalcularCotacao', name: 'cotacao' },
+    11: { path: './menuCadastroParceiro', name: 'parceiro' },           //FEITO
+    12: { path: './menuCalcularCotacao', name: 'cotacao' },             //FEITO
     13: { path: './menuFaleComigo', name: 'faleComigo' }
 };
 
