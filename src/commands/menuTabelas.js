@@ -1,17 +1,49 @@
 class MenuTabelas {
-    static execute(userInput, state, conn, from) {
-
-        if (userInput && state.currentMenu === 'tabelas') {
-            const menu = this.getMenu();
-            conn.sendMessage(from, menu); // conn = conexão Baileys, jid = número do destinatário
+    static async execute(userInput, state) {
+        // Se o usuário digitar "Q" em qualquer submenu, retorna ao menu principal
+        if (userInput && userInput.toLowerCase() === 'q') {
+            return this.resetAndReturnToMain(state);
         }
+
+        // Verifica se o usuário já viu a tabela e deseja voltar ao menu principal
+        if (state.currentMenu === 'tabelas' && userInput && state.hasSeenTable) {
+            return this.resetAndReturnToMain(state);
+        }
+
+        // Para qualquer interação no menu tabelas, mostra a imagem
+        return this.getMenu();
     }
-    
+
+    static resetAndReturnToMain(state) {
+        // Reseta o estado
+        Object.assign(state, {
+            currentMenu: 'main',
+            hasShownWelcome: false,
+            selectedCity: null,
+            hasSeenTable: false
+        });
+        
+        // Retorna null para indicar que deve mostrar mensagem de boas-vindas
+        return null;
+    }
+
     static getMenu() {
+        // Retorna um objeto de imagem diretamente no formato que o Baileys espera
         return {
-            image: { url: 'https://example.com/imagem.jpg' },
-            caption: 'Aqui está a tabela com nossos planos.\n\nDigite qualquer coisa para voltar ao menu principal!'
+            // IMAGEM MERAMENTE ILUSTRATIVA E NÃO REPRESENTA O PREÇO REAL DE QUALQUER PRODUTO OU SERVIÇO.
+            image: { url: 'https://br.freepik.com/vetores-gratis/tabela-de-precos_4591473.htm#fromView=search&page=1&position=4&uuid=141f3f49-f9a8-42cc-8d5c-2ab631febfd0&query=tabela+de+planos' },
+            caption: '📊 Exibindo tabela de preços...\n\nApós visualizar, digite "Q" para sair.'
         };
     }
+
+    // Mantemos o formatMenu para consistência com outros módulos
+    static formatMenu(menuData) {
+        let response = `${menuData.title}\n\n`;
+        Object.entries(menuData.options).forEach(([key, value]) => {
+            response += `${key} - ${value}\n`;
+        });
+        return response;
+    }
 }
+
 module.exports = MenuTabelas;
