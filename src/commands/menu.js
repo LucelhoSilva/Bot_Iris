@@ -12,7 +12,7 @@ const MENU_MODULES = {
     10: { path: './menuSuporte', name: 'suporte' },                     //FEITO
     11: { path: './menuCadastroParceiro', name: 'parceiro' },           //FEITO
     12: { path: './menuCalcularCotacao', name: 'cotacao' },             //FEITO
-    13: { path: './menuFaleComigo', name: 'faleComigo' }
+    13: { path: './menuFaleComigo', name: 'faleComigo' }                //EXCLUIR
 };
 
 class Menu {

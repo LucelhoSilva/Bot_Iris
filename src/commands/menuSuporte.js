@@ -1,19 +1,7 @@
 class MenuSuporte {
-
-    /*
-        IMPORTANTE: ===============================
-        ESSE ARQUIVO FOI DESENVOLVIDO EM TEMPO LIMITADO E RESTRITO DE TESTES
-        VERSÃO À QUAL FOI IMPLEMENTADO O ESTE CÓDIGO SEM TESTES: v0.9.0 (https://github.com/LucelhoSilva/WppChatBot/releases/tag/v0.9.0)
-        VERSÃO ATUAL: v0.9.0 (https://github.com/LucelhoSilva/WppChatBot/releases/tag/v0.9.0)
-        DATA DE HOJE: 22-02-2025
-        ASS: JOÃO PEDRO DE BRITO MONTEIRO - DESENVOLVEDOR CONTRIBUINTE DO PROJETO
-        =========================================
-    */
-
     static async execute(userInput, state) {
         if (userInput && userInput.toLowerCase() === 'q') {
-            state.currentMenu = 'main';
-            return "⬅ Voltando ao menu principal...";
+            return this.resetAndReturnToMain(state);
         }
 
         if (userInput && state.currentMenu === 'suporte') {
@@ -28,9 +16,8 @@ class MenuSuporte {
                     return "Volte ao menu principal e acesse \"Links para seu cliente\" para ter acesso a todos os links.";
                 case '5':
                     return "Acesse *www.example.com* para suporte completo e pesonalizado.";
-                case '6':
-                    this.resetState(state);
-                    return "⬅ Voltando ao menu principal...";
+                case 'q':
+                    return this.resetState(state);
                 default:
                     return "⚠️ Opção inválida. Por favor, escolha uma opção válida:\n\n" + this.getMenu();
             }
@@ -51,12 +38,12 @@ class MenuSuporte {
         return this.formatMenu({
             title: "🎧 Menu de Suporte",
             options: {
-                1: "📞 Atendimento ao Cliente",
-                2: "💰 Orçamento de Planos",
-                3: "⏰ Horário de Atendimento",
-                4: "🔗 Links para o Cliente",
-                5: "🌐 Nosso Site (Suporte completo e personalizado)",
-                6: "🔙 Voltar ao Menu Principal"
+                '1': "📞 Atendimento ao Cliente",
+                '2': "💰 Orçamento de Planos",
+                '3': "⏰ Horário de Atendimento",
+                '4': "🔗 Links para o Cliente",
+                '5': "🌐 Nosso Site (Suporte completo e personalizado)",
+                'Q': "🔙 Voltar ao Menu Principal"
             }
         });
     }

@@ -10,34 +10,34 @@ class MenuRedeDeAtendimento {
             switch (userInput) {
                 case '1':
                     state.selectedCity = 'São Paulo - SP';
-                    return ("Você selecionou São Paulo - SP. \n Sobre a Unidade:" + this.networkInfos());
+                    return "📌 Você selecionou São Paulo - SP. \n Sobre a Unidade:" + this.networkInfos();
                 case '2':
                     state.selectedCity = 'Rio de Janeiro - RJ';
-                    return "Você selecionou Rio de Janeiro - RJ. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Rio de Janeiro - RJ. \n Sobre a Unidade:" + this.networkInfos();
                 case '3':
                     state.selectedCity = 'Brasília - DF';
-                    return "Você selecionou Brasília - DF. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Brasília - DF. \n Sobre a Unidade:" + this.networkInfos();
                 case '4':
                     state.selectedCity = 'Fortaleza - CE';
-                    return "Você selecionou Fortaleza - CE. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Fortaleza - CE. \n Sobre a Unidade:" + this.networkInfos();
                 case '5':
                     state.selectedCity = 'Belo Horizonte - MG';
-                    return "Você selecionou Belo Horizonte - MG. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Belo Horizonte - MG. \n Sobre a Unidade:" + this.networkInfos();
                 case '6':
                     state.selectedCity = 'Cascavel - PR';
-                    return "Você selecionou Cascavel - PR. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Cascavel - PR. \n Sobre a Unidade:" + this.networkInfos();
                 case '7':
                     state.selectedCity = 'Porto Alegre - RS';
-                    return "Você selecionou Porto Alegre - RS. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Porto Alegre - RS. \n Sobre a Unidade:" + this.networkInfos();
                 case '8':
                     state.selectedCity = 'Salvador - BA';
-                    return "Você selecionou Salvador - BA. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Salvador - BA. \n Sobre a Unidade:" + this.networkInfos();
                 case '9':
                     state.selectedCity = 'Recife - PE';
-                    return "Você selecionou Recife - PE. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Recife - PE. \n Sobre a Unidade:" + this.networkInfos();
                 case '10':
                     state.selectedCity = 'Manaus - AM';
-                    return "Você selecionou Manaus - AM. \n Sobre a Unidade:" + this.networkInfos();
+                    return "📌 Você selecionou Manaus - AM. \n Sobre a Unidade:" + this.networkInfos();
                 case '11':
                     return this.resetAndReturnToMain(state);
                 default:
@@ -47,13 +47,14 @@ class MenuRedeDeAtendimento {
     }
 
     static networkInfos() {
+        state.currentMenu = null;
         return this.formatMenu({
             title: ".",
             options: {
-            '1': "Endereço: Rua Qualquer Brasileira - N° 123 - [UF]",
-            '2': "Horário de funcionamento: Seg-Sex das 00:00 às 23:59",
-            '3': "Contato: (00)123456789",
-            '4': "Serviços disponíveis: Serviço tal tal e tal",
+            '*': "Endereço: Rua Qualquer Brasileira - N° 123 - [UF]",
+            '*': "Horário de funcionamento: Seg-Sex das 00:00 às 23:59",
+            '*': "Contato: (00)123456789",
+            '*': "Serviços disponíveis: Serviço X, Y e Z",
             'Q': "Voltar ao Menu Principal ↩️"
             }
         });

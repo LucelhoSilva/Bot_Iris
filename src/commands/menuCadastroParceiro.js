@@ -3,8 +3,7 @@ class MenuParceiro {
         const lowerCaseUserInput = userInput.toLowerCase();
 
         if (lowerCaseUserInput === 'q') {
-            state.currentMenu = 'main';
-            return "⬅ Voltando ao menu principal...";
+            return this.resetAndReturnToMain(state);
         }
 
         if (state.currentMenu === 'parceiro') {
@@ -12,8 +11,7 @@ class MenuParceiro {
                 case 's':
                     return "💼 **Cadastro de Parceiro:**\n Acesse: *www.example.com/partner/new_partner* e faça seu cadastro!";
                 case 'n':
-                    this.resetState(state);
-                    return "⬅ Voltando ao menu principal...";
+                    return this.resetState(state);
                 default:
                     return "⚠️ Opção inválida. Por favor, escolha uma opção válida:\n\n" + this.getMenu();
             }

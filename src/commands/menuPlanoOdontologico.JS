@@ -21,19 +21,19 @@ class MenuPlanoOdontologico {
 
     // Lida com a seleção do menu de consulta do plano odontológico
     static handleConsultaMenu(userInput, state) {
-        const option = parseInt(userInput); // Converte a entrada para número inteiro
+        const option = toLowerCase(userInput); // Converte a entrada para minúsculas
 
         switch (option) {
-            case 1:
+            case '1':
                 state.currentMenu = 'consultar'; // Muda para o submenu de consulta
                 return "Certo, me diga o CPF cadastrado no Plano Odontológico [sem traços, pontos ou espaço]:";
-            case 2:
+            case '2':
                 state.currentMenu = 'realizar'; // Muda para o submenu de realizar cadastro
                 return "Entendi, vamos te cadastrar no Plano Odontológico!";
-            case 3:
+            case '3':
                 state.currentMenu = 'pagar'; // Muda para o submenu de pagamento
                 return "Ok, vou gerar seu código de pagamento! Só um segundo...";
-            case 4:
+            case 'q':
                 return this.resetAndReturnToMain(state); // Volta ao menu principal
             default:
                 return "⚠️ Opção inválida. Por favor, escolha uma opção válida:\n\n" + this.getMenu();
@@ -73,7 +73,7 @@ class MenuPlanoOdontologico {
                 1: "Consultar Plano Odontológico",
                 2: "Realizar Plano Odontológico",
                 3: "Pagar Plano Odontológico",
-                4: "Voltar ao menu principal",
+                'Q': "Digite Q para voltar ao menu principal"
             }
         });
     }

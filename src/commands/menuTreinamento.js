@@ -1,11 +1,7 @@
 class MenuTreinamento {
     static async execute(userInput, state) {
         if (userInput.toLowerCase() === 'q') {
-            state.currentMenu = 'treinamento';
-            return "⬅ Voltando ao menu treinamentos...";
-        } else if (state.currentMenu === 'treinamento' && parseInt(userInput) === 4){
-            this.resetState(state);
-            return "⬅ Voltando ao menu princiapl...";
+            return this.resetAndReturnToMain(state);
         }
 
         const trainingInfos = [
@@ -35,7 +31,7 @@ class MenuTreinamento {
 
         if (!isNaN(option) && option >= 1 && option <= trainingInfos.length) {
             const training = trainingInfos[option - 1];
-            return `📘 Você selecionou *${training.title}*\n\n${this.formatTrainingInfo(training)}\n\nDigite *Q* para voltar ao menu de treinamentos.`;
+            return `📘 Você selecionou *${training.title}*\n\n${this.formatTrainingInfo(training)}\n\nDigite *Q* para voltar ao menu principal.`;
         } else {
             return `⚠️ Opção inválida. Por favor, selecione uma opção entre 1 e 4.\n\n${this.getMenu()}`;
         }
@@ -54,10 +50,10 @@ class MenuTreinamento {
         return this.formatMenu({
             title: "📚 *Menu de Treinamentos*",
             options: {
-                1: "Treinamento 1",
-                2: "Treinamento 2",
-                3: "Treinamento 3",
-                4: "Voltar ao menu principal ⬅"
+                '1': "Treinamento 1",
+                '2': "Treinamento 2",
+                '3': "Treinamento 3",
+                'Q': "Voltar ao menu principal ⬅"
             }
         });
     }
