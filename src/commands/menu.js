@@ -12,7 +12,6 @@ const MENU_MODULES = {
     10: { path: './menuSuporte', name: 'suporte' },                     //FEITO
     11: { path: './menuCadastroParceiro', name: 'parceiro' },           //FEITO
     12: { path: './menuCalcularCotacao', name: 'cotacao' },             //FEITO
-    13: { path: './menuFaleComigo', name: 'faleComigo' }                //EXCLUIR
 };
 
 class Menu {
@@ -80,7 +79,7 @@ class Menu {
             return "⚠️ Opção inválida. Por favor, escolha uma opção válida:\n\n" + this.getMainMenu();
         }
 
-        if (option === 14) {
+        if (option === 13) {
             this.resetState(state);
             state.hasShownWelcome = false; // Força mostrar boas-vindas na próxima interação
             return "👋 Obrigado por usar nossos serviços. Até logo!";
@@ -117,8 +116,7 @@ class Menu {
                 10: "Suporte 🧑‍🔧",
                 11: "Cadastre-se para ser um parceiro da SL-91 💜",
                 12: "Calcular cotação 📈",
-                13: "Fale comigo 💜",
-                14: "Sair"
+                13: "Sair"
             }
         });
     }
