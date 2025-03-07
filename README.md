@@ -111,8 +111,4 @@ Cada módulo de menu segue uma estrutura padrão:
 
 ## 📝 Licença
 
-Este projeto está licenciado sob a licença [sua licença aqui] - veja o arquivo LICENSE para detalhes.
-
-## 📞 Contato
-
-Para mais informações, entre em contato com [seu contato aqui].
+Este projeto está licenciado sob a licença [MIT](./LICENSE) - veja o arquivo LICENSE para detalhes.
