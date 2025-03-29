@@ -56,7 +56,7 @@ class Menu {
                 }
             } catch (error) {
                 console.error('Erro ao executar módulo:', error);
-                return "⚠️ Desculpe, ocorreu um erro ao processar sua solicitação.";
+                return "⚠️ Desculpe, ocorreu um erro ao processar sua solicitação. Digite `Q` para voltar ao início. \n *Erro [menu_57-59]*";
             }
         }
 

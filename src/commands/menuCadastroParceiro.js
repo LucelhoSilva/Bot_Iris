@@ -2,16 +2,13 @@ class MenuParceiro {
     static async execute(userInput, state) {
         const lowerCaseUserInput = userInput.toLowerCase();
 
-        if (lowerCaseUserInput === 'q') {
-            return this.resetAndReturnToMain(state);
-        }
-
         if (state.currentMenu === 'parceiro') {
             switch (lowerCaseUserInput) {
                 case 's':
                     return "💼 **Cadastro de Parceiro:**\n Acesse: *www.example.com/partner/new_partner* e faça seu cadastro!";
                 case 'n':
-                    return this.resetState(state);
+                    this.resetState(state);
+                    return null
                 default:
                     return "⚠️ Opção inválida. Por favor, escolha uma opção válida:\n\n" + this.getMenu();
             }

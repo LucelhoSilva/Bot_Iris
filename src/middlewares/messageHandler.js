@@ -83,7 +83,7 @@ class MessageHandler {
             } catch (error) {
                 console.error('Erro ao processar comando:', error);
                 await this.sock.sendMessage(from, { 
-                    text: 'Desculpe, ocorreu um erro ao processar sua solicitação.' 
+                    text: 'Desculpe, ocorreu um erro ao processar sua solicitação. Digite `Q` para voltar ao início. \n\n *Erro [mssgHdl_83-86]:* + ', error
                 });
             }
         } catch (error) {

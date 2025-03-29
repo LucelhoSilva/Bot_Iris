@@ -31,7 +31,7 @@ class MenuTabelas {
         // Retorna um objeto de imagem diretamente no formato que o Baileys espera
         return {
             // IMAGEM MERAMENTE ILUSTRATIVA E NÃO REPRESENTA O PREÇO REAL DE QUALQUER PRODUTO OU SERVIÇO.
-            image: { url: 'https://br.freepik.com/vetores-gratis/tabela-de-precos_4591473.htm#fromView=search&page=1&position=4&uuid=141f3f49-f9a8-42cc-8d5c-2ab631febfd0&query=tabela+de+planos' },
+            image: { url: 'https://img.freepik.com/vetores-gratis/tabela-de-precos_52683-8998.jpg' },
             caption: '📊 Exibindo tabela de preços...\n\nApós visualizar, digite "Q" para sair.'
         };
     }
